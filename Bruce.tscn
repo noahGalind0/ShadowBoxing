@@ -1,0 +1,100 @@
+[gd_scene load_steps=19 format=3 uid="uid://etnwmpu5mpye"]
+
+[ext_resource type="Texture2D" uid="uid://cpvalvj81t6p7" path="res://Assets/BruceHead.png" id="1_qmjow"]
+[ext_resource type="Script" path="res://Bruce.gd" id="1_xkon2"]
+[ext_resource type="Texture2D" uid="uid://cof2shpk7np2y" path="res://Assets/BruceLeftArm.png" id="2_a4aah"]
+[ext_resource type="Texture2D" uid="uid://c7vnpctk4gelk" path="res://Assets/BruceBody.png" id="2_hk6y1"]
+[ext_resource type="Texture2D" uid="uid://g4218jak37xf" path="res://Assets/BruceHeadUp.png" id="3_5bs2s"]
+[ext_resource type="Texture2D" uid="uid://c7hnidwhwub87" path="res://Assets/BruceRightArm.png" id="4_24b6u"]
+[ext_resource type="Script" path="res://BruceHeadUp.gd" id="4_a1td5"]
+[ext_resource type="Script" path="res://BruceRight.gd" id="5_5kjfd"]
+[ext_resource type="Texture2D" uid="uid://r74g2qbr1vs6" path="res://Assets/BruceHeadDown.png" id="5_502hv"]
+[ext_resource type="Script" path="res://BruceLeft.gd" id="5_vrpfm"]
+[ext_resource type="Texture2D" uid="uid://i433fjhkcnpr" path="res://Assets/BruceHeadLeft.png" id="6_nep0m"]
+[ext_resource type="Script" path="res://BruceUp.gd" id="6_tomh1"]
+[ext_resource type="Script" path="res://BruceDown.gd" id="7_4dvom"]
+[ext_resource type="Texture2D" uid="uid://cax6ocpp81ben" path="res://Assets/BruceHeadRight.png" id="7_bn6oh"]
+[ext_resource type="Script" path="res://BruceHeadDown.gd" id="7_ovre5"]
+[ext_resource type="Script" path="res://BruceHeadLeft.gd" id="9_n5u65"]
+[ext_resource type="Script" path="res://BruceHeadRight.gd" id="11_tm4in"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjvge"]
+size = Vector2(68, 183)
+
+[node name="Bruce" type="CharacterBody2D"]
+script = ExtResource("1_xkon2")
+
+[node name="BruceHeadStraight" type="Sprite2D" parent="."]
+position = Vector2(72, 3)
+scale = Vector2(0.678407, 0.678407)
+texture = ExtResource("1_qmjow")
+
+[node name="BruceHeadUp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, -75)
+scale = Vector2(0.178118, 0.178118)
+texture = ExtResource("3_5bs2s")
+script = ExtResource("4_a1td5")
+
+[node name="BruceBody" type="Sprite2D" parent="."]
+position = Vector2(73, 4)
+scale = Vector2(0.690243, 0.690243)
+texture = ExtResource("2_hk6y1")
+
+[node name="BruceHeadDown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -66)
+scale = Vector2(0.15975, 0.15975)
+texture = ExtResource("5_502hv")
+script = ExtResource("7_ovre5")
+
+[node name="BruceHeadLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-5, -71)
+scale = Vector2(0.174076, 0.174076)
+texture = ExtResource("6_nep0m")
+script = ExtResource("9_n5u65")
+
+[node name="BruceHeadRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(6, -66)
+scale = Vector2(0.174798, 0.174798)
+texture = ExtResource("7_bn6oh")
+script = ExtResource("11_tm4in")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_rjvge")
+
+[node name="BruceLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-13, 77)
+rotation = -1.03704
+scale = Vector2(0.827105, 0.827105)
+texture = ExtResource("2_a4aah")
+script = ExtResource("5_vrpfm")
+
+[node name="BruceRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(57.4065, 71.8258)
+rotation = 1.07799
+scale = Vector2(0.823518, 0.823518)
+texture = ExtResource("4_24b6u")
+script = ExtResource("5_5kjfd")
+
+[node name="BruceUp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-69, -53)
+rotation = 0.410328
+scale = Vector2(0.715031, 0.715031)
+texture = ExtResource("2_a4aah")
+script = ExtResource("6_tomh1")
+
+[node name="BruceDown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-62.5244, 7.59626)
+rotation = 2.57775
+scale = Vector2(0.688753, 0.688753)
+texture = ExtResource("4_24b6u")
+script = ExtResource("7_4dvom")

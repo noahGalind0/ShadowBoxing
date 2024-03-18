@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn6fxmumfcbx2"]
+
+[ext_resource type="Script" path="res://Global.gd" id="1_e5k35"]
+[ext_resource type="PackedScene" uid="uid://6tjqvf7qlpfx" path="res://Stage.tscn" id="1_u0f5h"]
+[ext_resource type="PackedScene" uid="uid://etnwmpu5mpye" path="res://Bruce.tscn" id="2_2l60w"]
+[ext_resource type="PackedScene" uid="uid://kgvbbaoliknv" path="res://Raygan.tscn" id="3_xhelf"]
+[ext_resource type="Script" path="res://Timer.gd" id="5_42ouf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e5k35")
+
+[node name="Stage" parent="." instance=ExtResource("1_u0f5h")]
+position = Vector2(-1, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_2l60w")]
+position = Vector2(475, 269)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_xhelf")]
+position = Vector2(716, 272)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(604, 271)
+zoom = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("5_42ouf")
+
+[node name="Label" type="Label" parent="Timer"]
+offset_left = 543.0
+offset_top = 258.0
+offset_right = 625.0
+offset_bottom = 305.0
+horizontal_alignment = 1

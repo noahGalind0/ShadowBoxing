@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://6tjqvf7qlpfx"]
+
+[ext_resource type="Texture2D" uid="uid://bbre0ytlc2adt" path="res://Assets/1200px-SSBU-Final_Destination.jpg" id="1_610n5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ds43"]
+size = Vector2(878, 104)
+
+[node name="Stage" type="StaticBody2D"]
+
+[node name="1200Px-ssbu-finalDestination" type="Sprite2D" parent="."]
+position = Vector2(599, 339)
+texture = ExtResource("1_610n5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(591, 412)
+shape = SubResource("RectangleShape2D_8ds43")
